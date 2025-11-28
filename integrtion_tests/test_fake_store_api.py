@@ -1,9 +1,9 @@
-import pytest, requests
+import pytest
+import requests
 
-def test_that_products_returns_status_code_200():
-    response = requests.get("https://fakestoreapi.com/products")
+BASE_URL = "https://fakestoreapi.com"
 
-    actual = response.status_code
-    expected = 200
+def test_get_products_returns_200():
+    response = requests.get(f"{BASE_URL}/products")
 
-    assert actual == expected
+    assert response.status_code == 200
