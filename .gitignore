@@ -1,0 +1,8 @@
+# IDE config. files
+.idea/
+
+# Virtual Env.
+.venv/
+
+# Logs & temporary files
+__pycache__/
