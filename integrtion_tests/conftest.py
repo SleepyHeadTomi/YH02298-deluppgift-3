@@ -28,7 +28,7 @@ def api_response():
 @pytest.fixture
 def api_data_item_1(expected_data):
 
-    response = requests.get(f"{BASE_URL}/products/{expected_data.get("id")}")
+    response = requests.get(f"{BASE_URL}/products/{expected_data.get('id')}")
     data = response.json()
 
     return data
