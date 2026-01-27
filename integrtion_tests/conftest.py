@@ -2,7 +2,6 @@ import pytest
 import requests
 
 BASE_URL = "https://fakestoreapi.com"
-headers = {"User-Agent": "Mozilla/5.0"}
 
 @pytest.fixture
 def expected_data():
@@ -22,14 +21,14 @@ def expected_data():
 @pytest.fixture
 def api_response():
 
-    response = requests.get(f"{BASE_URL}/products", headers=headers)
+    response = requests.get(f"{BASE_URL}/products")
 
     return response
 
 @pytest.fixture
 def api_data_item_1(expected_data):
 
-    response = requests.get(f"{BASE_URL}/products/{expected_data.get('id')}", headers=headers)
+    response = requests.get(f"{BASE_URL}/products/{expected_data.get('id')}")
     data = response.json()
 
     return data

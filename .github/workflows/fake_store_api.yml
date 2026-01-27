@@ -25,4 +25,11 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -v
+          pytest -v --junitxml=junit/test-results-3.11.xml
+
+      - name: Upload pytest test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results-3.11
+          path: junit/test-results-3.11.xml
