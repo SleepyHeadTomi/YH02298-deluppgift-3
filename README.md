@@ -2,15 +2,21 @@
 
 Denna uppgift innehåller automatiserade tester för att testa routes på fakestoreapi.com
 
-#### Nödvändig mjukvara:
-- Python (rekommenderad Python-tolk: version 3.11)
-- IDE (PyCharm rekommenderas men det går med annan IDE med stöd för Python)
+Projektet har utvecklats med Python-version 3.13.4, men bör fungera med tidigare versioner (exempelvis med 3.11 om denna
+version redan finns installerad på datorn).
 
-#### Installationsguide:
-1. Klona ner repot lokalt
-2. Starta PyCharm och öppna upp projektet
-3. Öppna upp en terminal i PyCharm och utför följande kommandon:
-   - `python -m venv .venv` för att skapa en virtuell miljö för projektet
-   - `.venv\Scripts\activate` (för Win) alt. `source .venv/bin/activate` (Mac/Linux) för att aktivera miljön
-   - `pip install -r requirements.txt` för att installera beroenden
-4. Testen är nu redo att köras, antingen direkt i PyCharm eller terminalen med kommandot `pytest -v`
+#### Krav:
+Följande behöver installerat på datorn:
+- Python 3.13 (alt. 3.11)
+- (IDE, tex PyCharm)
+
+#### Installationsguide (via `cmd`, System: Windows):
+1. Öppna kommandotolk och klona ner repot från GitHub, `git clone https://github.com/SleepyHeadTomi/YH02298-deluppgift-3.git`
+2. Gå in i projekt-mappen: `cd YH02298-deluppgift-3`
+3. Skapa virtuell miljö: `py -3.13 -m venv .venv`
+4. Aktivera miljö: `.venv\Scripts\activate`
+5. Installera paket: `pip install -r requirements.txt`
+6. Kör test med: `pytest -v`
+7. Deaktivera miljön efter körning: `deactivate`
+
+Som i deluppgift 2, går det bra att köra denna procedur i IDE:n.
