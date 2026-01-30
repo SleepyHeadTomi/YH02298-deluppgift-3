@@ -1,21 +1,21 @@
 import requests
 
-BASE_URL = "https://fakestoreapi.com"
+BASE_URL = "https://fakestoreapi.com/products"
 
 def test_get_products_returns_statuscode_200():
-    response = requests.get(f"{BASE_URL}/products")
+    response = requests.get(f"{BASE_URL}")
     assert response.status_code == 200
 
 
 def test_get_products_returns_20_items():
-    response = requests.get(f"{BASE_URL}/products")
+    response = requests.get(f"{BASE_URL}")
 
     data = response.json()
 
     assert len(data) == 20
 
 def test_get_item_1_returns_correct_fields():
-    response = requests.get(f"{BASE_URL}/products/1")
+    response = requests.get(f"{BASE_URL}/1")
 
     product_data = response.json()
     assert product_data["id"] == 1
@@ -26,7 +26,7 @@ def test_get_item_1_returns_correct_fields():
 
 
 def test_get_item_1_returns_correct_data():
-    response = requests.get(f"{BASE_URL}/products/1")
+    response = requests.get(f"{BASE_URL}/1")
 
     product_data = response.json()
 
